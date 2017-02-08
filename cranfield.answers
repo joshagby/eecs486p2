@@ -1,0 +1,84 @@
+Joshua Agby - joshagby
+
+Overall, the tfc.nfx weighting scheme provides better results (as expected). 
+This is determined by looking at the F-Score values for each scheme and 
+each scenario. When summing all F-Scores for each scheme, tfc.nfx has a combined
+score 0.0228 above that for tfidf.tfidf, which is about a 3.6% increase. Looking at 
+macro averaged precision and recall individually, recall is slightly higher for
+the tfidf.tfidf scheme for all scenarios, and precision is greater for tfc.nfx
+in all scenarios. The recall values are very close (around 1% max difference between schemes) 
+whereas the difference in precision is larger (around 3% between schemes). This means 
+that on average tfc.nfx returns fewer irrelevant docs than tfidf, but tfidf is slightly
+better at returning more of the relevant docs. 
+
+See data summary below for detail, and the total raw data 
+output below that for all data collected. 
+
+------------ DATA SUMMARY --------------
+Recall / Precision / F_Score - tfidf.tfidf
+Recall / Precision / F_Score - tfc.nfx 
+only 4 signifacnt figures shown
+
+Top 10 Words:
+0.1015 / 0.2805 / 0.1491 (Recall/Precision tfidf.tfidf)
+0.0938 / 0.3116 / 0.1442 (Recall/Precision tfc.nfx)
+
+Top 50 Words:
+0.2507 / 0.2329 / 0.2415 (Recall/Precision tfidf.tfidf)
+0.2407 / 0.2641 / 0.2519 (Recall/Precision tfc.nfx)
+
+Top 100 Words:
+0.4522 / 0.1547 / 0.2305 (Recall/Precision tfidf.tfidf)
+0.4398 / 0.1725 / 0.2478 (Recall/Precision tfc.nfx)
+
+Top 500 Words:
+0.9520 / 0.0083 / 0.0165 (Recall/Precision tfidf.tfidf)
+0.9520 / 0.0083 / 0.0165 (Recall/Precision tfc.nfx)
+
+Total F_Score tfidf.tfidf = 0.6376
+Total F_score tfc.nfx = 0.6604
+
+
+------------- FULL DATA OUTPUT ---------------
+
+Using top 10 documents in the ranking...
+with tfc.nfx weighting scheme...
+Macro averaged recall: 0.0938277758915
+Macro averaged precision: 0.311607769236
+
+Using top 50 documents in the ranking...
+with tfc.nfx weighting scheme...
+Macro averaged recall: 0.240738763052
+Macro averaged precision: 0.264056862692
+
+Using top 100 documents in the ranking...
+with tfc.nfx weighting scheme...
+Macro averaged recall: 0.439826107806
+Macro averaged precision: 0.172482751061
+
+Using top 500 documents in the ranking...
+with tfc.nfx weighting scheme...
+Macro averaged recall: 0.952021242374
+Macro averaged precision: 0.00827735517065
+
+--- --- --- --- --- --- --- --- --- --- --- 
+
+Using top 10 documents in the ranking...
+with tfidf.tfidf weighting scheme...
+Macro averaged recall: 0.101505738089
+Macro averaged precision: 0.280496658125
+
+Using top 50 documents in the ranking...
+with tfidf.tfidf weighting scheme...
+Macro averaged recall: 0.250683150183
+Macro averaged precision: 0.232945751581
+
+Using top 100 documents in the ranking...
+with tfidf.tfidf weighting scheme...
+Macro averaged recall: 0.45219377536
+Macro averaged precision: 0.154704973283
+
+Using top 500 documents in the ranking...
+with tfidf.tfidf weighting scheme...
+Macro averaged recall: 0.952021242374
+Macro averaged precision: 0.00827735517065
